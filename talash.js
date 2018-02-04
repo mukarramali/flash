@@ -25,8 +25,7 @@ function titleize(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// on more result, toggle the less important rows
-$(document).on('click', extendSearchToggle, function(){
+function toggleSearch(){
   if($(extendSearchIcon).hasClass(upIcon))
   {
     $(lessImportantRows).show();
@@ -42,7 +41,10 @@ $(document).on('click', extendSearchToggle, function(){
   // Refresh the search result again with more results
   var e = $.Event('keyup');
   $(searchInputId).trigger(e);
-});
+}
+
+// on more result, toggle the less important rows
+$(document).on('click', extendSearchToggle, toggleSearch);
 
 var hightlighter_prefix = "<span class=\"highlight\">";
 var hightlighter_suffix = '</span>';
@@ -78,40 +80,40 @@ function hightlight(search_value, tableId){
 }
 
 $(document).ready(function(){
-
   $(lessImportantRows).hide();
   $(notFoundDiv).hide();
-
   // When something is entered in search box
-  $(searchInputId).keyup(function(){
-    var search_value = $(this).val();
-    var rows = $(rowClass);
-    var found = false;
+  $(searchInputId).keyup(talash);
 
-    if(search_value.length > 0){
-
-      for(var i=0; i<rows.length; i++)
-      {
-        current_row = rows[i];
-        if(current_row.textContent.toLowerCase().indexOf(search_value.toLowerCase()) > -1)
-        {
-          $(current_row).show();
-          found = true;
-        }
-        else
-          $(current_row).hide();
-      }
-
-      afterSearch(found, search_value);
-    }
-    else{
-      removeHighlight(tableId);
-      $(rowClass).show();
-      afterSearch(true, search_value);
-    }
-  });
-  //keyup function end
 });
+
+function talash(){
+  var search_value = $(searchInputId).val();
+  console.log("Searching " + search_value);
+  var rows = $(rowClass);
+  var found = false;
+
+  if(search_value.length > 0){
+
+    for(var i=0; i<rows.length; i++)
+    {
+      current_row = rows[i];
+      if(current_row.textContent.toLowerCase().indexOf(search_value.toLowerCase()) > -1)
+      {
+        $(current_row).show();
+        found = true;
+      }
+      else
+        $(current_row).hide();
+    }
+    afterSearch(found, search_value);
+  }
+  else{
+    $(rowClass).show();
+    removeHighlight(tableId);
+    afterSearch(true, search_value);
+  }
+}
 
 // Things to be done after search success or not. Here, showing 'Not Found' message
 function afterSearch(found, search_value = ''){
@@ -127,5 +129,5 @@ function afterSearch(found, search_value = ''){
       $(notFoundDiv).text("Couldn't find. Try 'More Results' near the search bar.");
   }
   if(!moreResultsEnabled())
-  $(lessImportantRows).hide();
+    $(lessImportantRows).hide();
 }
