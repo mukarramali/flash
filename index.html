@@ -2,21 +2,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Talash</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="talash.css"/>
     <script type="text/javascript" src="talash.js"></script>
+
+    <title>Talash</title>
 
   </head>
 
@@ -36,7 +32,7 @@
           </span>
         </div>
 
-        <table id="commands_table" class="table dialog-table myTable table-striped" cols="5" border="0">
+        <table id="commands_table" class="table table-striped" cols="5" border="0">
 
           <thead>
             <tr>
@@ -47,27 +43,7 @@
 
           <tbody id="commands_table_body">
             <script type="text/javascript">
-              var headings = getHeadings();
-              var innerHTML = "";
-              headings.forEach(function(heading, index){
-                innerHTML += "<tr><th colspan=\"5\">" + heading.toUpperCase() + "</th></tr>";
-                var jsonData = getData(heading);
-                jsonData.forEach(function(row, index){
-                  var important = row.important == true ? "important" : "less_important";
-                  innerHTML += "<tr class=\"commands_row  " + important + " " + heading + "\">";
-                  innerHTML += "<td colspan=\"2\" class=\"commands_cell\">";
-                  innerHTML += "<keybd class=\"keybd\" data-current-os='" + JSON.stringify(row) + "'>" + row.keyMap + "</keybd>";
-                  innerHTML += "</td>";
-
-                  innerHTML += "<td class=\"break-words commands_cell\" colspan=\"3\">";
-                  innerHTML += titleize(row.function);
-                  if("usage" in row){
-                    innerHTML += " | " + titleize(row.usage);
-                  }
-                  innerHTML += "</td></tr>";
-                });
-              });
-              $("#commands_table_body").html(innerHTML);
+              printTable();
             </script>
 
             <tr>

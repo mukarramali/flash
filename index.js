@@ -2,6 +2,30 @@ function getHeadings(){
   return ["heading a", "heading b", "heading c", "heading d"];
 }
 
+function printTable(){
+  var headings = getHeadings();
+  var innerHTML = "";
+  headings.forEach(function(heading, index){
+    innerHTML += "<tr><th colspan=\"5\">" + heading.toUpperCase() + "</th></tr>";
+    var jsonData = getData(heading);
+    jsonData.forEach(function(row, index){
+      var important = row.important == true ? "important" : "less_important";
+      innerHTML += "<tr class=\"commands_row  " + important + " " + heading + "\">";
+      innerHTML += "<td colspan=\"2\" class=\"commands_cell\">";
+      innerHTML += "<keybd class=\"keybd\" data-current-os='" + JSON.stringify(row) + "'>" + row.keyMap + "</keybd>";
+      innerHTML += "</td>";
+
+      innerHTML += "<td class=\"break-words commands_cell\" colspan=\"3\">";
+      innerHTML += titleize(row.function);
+      if("usage" in row){
+        innerHTML += " | " + titleize(row.usage);
+      }
+      innerHTML += "</td></tr>";
+    });
+  });
+  $("#commands_table_body").html(innerHTML);
+}
+
 function getData(heading){
   var data = {
     "heading a":
