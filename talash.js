@@ -3,6 +3,7 @@ var row_class = 'commands_row';
 var column_class = 'commands_cell';
 var table_id = '#commands_table';
 var show_more_button_suffix = 'show_more_button_';
+var msgDiv = '#command_not_found';
 
 function moreResultsEnabled(){
   return $('#extend_search_icon').hasClass('fa-chevron-down');
@@ -14,7 +15,6 @@ function titleize(string){
 
 // Things to be done after search success or not. Here, showing 'Not Found' message
 function searchResult(found){
-  var msgDiv = '#command_not_found';
   if(found)
     $(msgDiv).hide();
   else{
@@ -82,7 +82,7 @@ function hightlight(search_value, table_id){
 $(document).ready(function(){
 
   $('.less_important').hide();
-
+  $(msgDiv).hide();
   // When something is entered in search box
   $(search_input_id).keyup(function(){
     var search_value = $(this).val();
