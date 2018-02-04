@@ -6,8 +6,8 @@ var extendSearchToggle = '#extend_search_toggle';
 var extendSearchIcon = '#extend_search_icon';
 var extendSearchText = '#extend_search_text';
 
-var rowClass = 'commands_row';
-var columnClass = 'commands_cell';
+var rowClass = '.commands_row';
+var columnClass = '.commands_cell';
 
 var downIcon = 'fa-chevron-down';
 var upIcon = 'fa-chevron-up';
@@ -65,7 +65,7 @@ function hightlight(search_value, tableId){
   // highlight new query
   if(search_value.length > 0){
     var search_regexp = new RegExp(search_value, 'ig');
-    var cells = document.getElementsByClassName(columnClass);
+    var cells = $(columnClass);
     for(var i=0;i<cells.length;i++)
     {
       if(cells[i].innerHTML.indexOf('keybd') >= 0)
@@ -85,7 +85,7 @@ $(document).ready(function(){
   // When something is entered in search box
   $(searchInputId).keyup(function(){
     var search_value = $(this).val();
-    var rows = document.getElementsByClassName(rowClass);
+    var rows = $(rowClass);
     var found = false;
 
     if(search_value.length > 0){
@@ -106,10 +106,8 @@ $(document).ready(function(){
     }
     else{
       removeHighlight(tableId);
-      $('.'+rowClass).show();
+      $(rowClass).show();
       afterSearch(true, search_value);
-      if(!moreResultsEnabled())
-        $(lessImportantRows).hide();
     }
   });
   //keyup function end
@@ -128,4 +126,6 @@ function afterSearch(found, search_value = ''){
     else
       $(notFoundDiv).text("Couldn't find. Try 'More Results' near the search bar.");
   }
+  if(!moreResultsEnabled())
+  $(lessImportantRows).hide();
 }
