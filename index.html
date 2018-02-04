@@ -26,19 +26,23 @@
       </div>
 
       <div class="container">
+
         <div class="input-group">
           <input type="text" id="search_commands" class="form-control" placeholder="Search command..">
-          <span id="extend_search" class="input-group-addon" style="cursor: pointer;">
+          <span id="extend_search_toggle" class="input-group-addon" style="cursor: pointer;">
             <span id="extend_search_text">More Results&nbsp;&nbsp;</span><span id="extend_search_icon" class="fa fa-chevron-up icon"></span>
           </span>
         </div>
+
         <table id="commands_table" class="table dialog-table myTable table-striped" cols="5" border="0">
+
           <thead>
             <tr>
-              <th colspan="2">KeyShortcut</th>
-              <th colspan="3">Usage</th>
+              <th colspan="2">ColumnA</th>
+              <th colspan="3">ColumnB</th>
             </tr>
           </thead>
+
           <tbody id="commands_table_body">
             <script type="text/javascript">
               var headings = getHeadings();
@@ -63,8 +67,9 @@
               });
               $("#commands_table_body").html(innerHTML);
             </script>
+
             <tr>
-              <td id="command_not_found" style="display: none;" colspan="5">Sorry, keyword you searched not found, try alternate synonym!</td>
+              <td id="command_not_found" style="display: none;" colspan="5"></td>
             </tr>
           </tbody>
         </table>

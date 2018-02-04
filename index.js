@@ -1,10 +1,10 @@
 function getHeadings(){
-  return ["basic", "sublime", "vim", "emacs"];
+  return ["heading a", "heading b", "heading c", "heading d"];
 }
 
 function getData(heading){
   var data = {
-    "basic":
+    "heading a":
       [
         {
           "important":true,
@@ -211,7 +211,7 @@ function getData(heading){
           "usage":"Dedent the current line or selection by one indent unit"
         }
       ],
-    "sublime":
+    "heading b":
       [
         {
           "important":true,
@@ -503,7 +503,7 @@ function getData(heading){
           "usage":"swap next character"
         }
       ],
-    "vim":
+    "heading c":
       [
         {
           "important":true,
@@ -772,7 +772,7 @@ function getData(heading){
           "usage":"Find/search"
         }
       ],
-    "emacs":
+    "heading d":
       [
         {
           "important":false,
