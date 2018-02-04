@@ -29,12 +29,12 @@ $(document).on('click', extendSearchToggle, function(){
     $(lessImportantRows).show();
     $(extendSearchIcon).removeClass(upIcon);
     $(extendSearchIcon).addClass(downIcon);
-    $(extendSearchIcon).text('Less Results  ');
+    $(extendSearchText).text('Less Results  ');
   }else{
     $(lessImportantRows).hide();
     $(extendSearchIcon).removeClass(downIcon);
     $(extendSearchIcon).addClass(upIcon);
-    $(extendSearchIcon).text('More Results  ');
+    $(extendSearchText).text('More Results  ');
   }
   // Refresh the search result again with more results
   var e = $.Event('keyup');
