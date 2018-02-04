@@ -14,6 +14,9 @@ var upIcon = 'fa-chevron-up';
 
 var lessImportantRows = '.less_important';
 
+var moreResultMsg = 'More Results';
+var lessResultMsg = 'Less Results';
+
 function moreResultsEnabled(){
   return $(extendSearchIcon).hasClass(downIcon);
 }
@@ -29,12 +32,12 @@ $(document).on('click', extendSearchToggle, function(){
     $(lessImportantRows).show();
     $(extendSearchIcon).removeClass(upIcon);
     $(extendSearchIcon).addClass(downIcon);
-    $(extendSearchText).text('Less Results  ');
+    $(extendSearchText).text(lessResultMsg + ' ');
   }else{
     $(lessImportantRows).hide();
     $(extendSearchIcon).removeClass(downIcon);
     $(extendSearchIcon).addClass(upIcon);
-    $(extendSearchText).text('More Results  ');
+    $(extendSearchText).text(moreResultMsg + ' ');
   }
   // Refresh the search result again with more results
   var e = $.Event('keyup');
@@ -78,6 +81,7 @@ $(document).ready(function(){
 
   $(lessImportantRows).hide();
   $(notFoundDiv).hide();
+
   // When something is entered in search box
   $(searchInputId).keyup(function(){
     var search_value = $(this).val();
@@ -85,7 +89,8 @@ $(document).ready(function(){
     var found = false;
 
     if(search_value.length > 0){
-      for(var i=0;i<rows.length;i++)
+
+      for(var i=0; i<rows.length; i++)
       {
         current_row = rows[i];
         if(current_row.textContent.toLowerCase().indexOf(search_value.toLowerCase()) > -1)
@@ -96,16 +101,13 @@ $(document).ready(function(){
         else
           $(current_row).hide();
       }
-      // If we found even a single search success, call highlight
-      if(found){
-        hightlight(search_value, tableId);
-      }
-      searchResult(found);
+
+      afterSearch(found, search_value);
     }
     else{
       removeHighlight(tableId);
       $('.'+rowClass).show();
-      searchResult(true);
+      afterSearch(true, search_value);
       if(!moreResultsEnabled())
         $(lessImportantRows).hide();
     }
@@ -114,9 +116,11 @@ $(document).ready(function(){
 });
 
 // Things to be done after search success or not. Here, showing 'Not Found' message
-function searchResult(found){
-  if(found)
+function afterSearch(found, search_value = ''){
+  if(found){
     $(notFoundDiv).hide();
+    hightlight(search_value, tableId);
+  }
   else{
     $(notFoundDiv).show();
     if(moreResultsEnabled())
