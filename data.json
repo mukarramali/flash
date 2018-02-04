@@ -1,0 +1,1055 @@
+{
+  "basic":
+    [
+      {
+        "important":true,
+        "function":"help",
+        "mac":"^⇧H",
+        "usage":"find shortcuts for the editor",
+        "pc":"^⇧H"
+      },
+      {
+        "important":false,
+        "function":"selectAll",
+        "mac":"⌘A",
+        "usage":"Select the whole content",
+        "pc":"⌃A"
+      },
+      {
+        "important":false,
+        "function":"singleSelection",
+        "mac":"Esc",
+        "usage":"this deselects multiple selection except the primary one",
+        "pc":"Esc"
+      },
+      {
+        "important":false,
+        "function":"deleteLine",
+        "mac":"⌘D",
+        "usage":"Deletes/Removes the line under the cursor",
+        "pc":"⌃D"
+      },
+      {
+        "important":false,
+        "function":"redo",
+        "mac":"⌘Y",
+        "usage":"Redo the last undone change",
+        "pc":"⌃Y"
+      },
+      {
+        "important":false,
+        "function":"goDocStart",
+        "mac":"⌘Up",
+        "usage":"Move the cursor to the start/beginning of the document",
+        "pc":"⌃Home"
+      },
+      {
+        "important":false,
+        "function":"goDocEnd",
+        "mac":"⌘Down",
+        "usage":"Move the cursor to the end of the document",
+        "pc":"⌃End"
+      },
+      {
+        "important":true,
+        "function":"goLineStart",
+        "mac":"⌃A",
+        "usage":"Move the cursor to the start of the line",
+        "pc":"⌥Left"
+      },
+      {
+        "important":false,
+        "function":"goLineStart",
+        "mac":"Home",
+        "usage":"Move to the start of the text on the line",
+        "pc":"Home"
+      },
+      {
+        "important":true,
+        "function":"goLineEnd",
+        "mac":"⌥⌃E",
+        "usage":"Move the cursor to the end of the line",
+        "pc":"⌥Right"
+      },
+      {
+        "important":false,
+        "function":"goLineRight",
+        "mac":"⌘Right",
+        "usage":"Move the cursor to the right side of the visual line it is on",
+        "pc":"⌘Right"
+      },
+      {
+        "important":false,
+        "function":"goLineUp",
+        "mac":"Up",
+        "usage":"Move the cursor up one line",
+        "pc":"Up"
+      },
+      {
+        "important":false,
+        "function":"goLineDown",
+        "mac":"Down",
+        "usage":"Move down one line",
+        "pc":"Down"
+      },
+      {
+        "important":false,
+        "function":"goPageUp",
+        "mac":"⇧⌃V",
+        "usage":"Move the cursor up one screen",
+        "pc":"PageUp"
+      },
+      {
+        "important":false,
+        "function":"goPageDown",
+        "mac":"⌃V",
+        "usage":"Move the cursor down one screen",
+        "pc":"PageDown"
+      },
+      {
+        "important":false,
+        "function":"goCharLeft",
+        "mac":"⌃B",
+        "usage":"Move the cursor one character left",
+        "pc":"Left"
+      },
+      {
+        "important":false,
+        "function":"goCharRight",
+        "mac":"⌃F",
+        "usage":"Move the cursor one character right",
+        "pc":"Right"
+      },
+      {
+        "important":false,
+        "function":"goWordLeft",
+        "mac":"⌥B",
+        "usage":"Move the cursor to the start of the previous word",
+        "pc":"⌥B"
+      },
+      {
+        "important":false,
+        "function":"goWordRight",
+        "mac":"⌥F",
+        "usage":"Move the cursor to the end of the next word",
+        "pc":"⌥F"
+      },
+      {
+        "important":false,
+        "function":"goGroupLeft",
+        "mac":"⌥Left",
+        "usage":"Move to the left of the group before the cursor",
+        "pc":"⌃Left"
+      },
+      {
+        "important":false,
+        "function":"goGroupRight",
+        "mac":"⌥Right",
+        "usage":"Move to the right of the group after the cursor",
+        "pc":"⌃Right"
+      },
+      {
+        "important":false,
+        "function":"delCharBefore",
+        "mac":"⇧⌫",
+        "usage":"Delete the character before the cursor",
+        "pc":"⇧⌫"
+      },
+      {
+        "important":false,
+        "function":"delCharAfter",
+        "mac":"⌃D",
+        "usage":"Delete/Remove the character after the cursor",
+        "pc":"⌃D"
+      },
+      {
+        "important":true,
+        "function":"delWordBefore",
+        "mac":"⌥⌫",
+        "usage":"Delete up to the start of the word before the cursor or the first whitespace",
+        "pc":"⌥⌫"
+      },
+      {
+        "important":true,
+        "function":"delWordAfter",
+        "mac":"⌥D",
+        "usage":"Delete up to the end of the word after the cursor",
+        "pc":"⌥D"
+      },
+      {
+        "important":false,
+        "function":"delGroupBefore",
+        "mac":"⌥⌫",
+        "usage":"Delete to the left of the group before the cursor",
+        "pc":"⌃⌫"
+      },
+      {
+        "important":false,
+        "function":"delGroupAfter",
+        "mac":"⌥Delete",
+        "usage":"Delete to the start of the group after the cursor",
+        "pc":"⌃Delete"
+      },
+      {
+        "important":false,
+        "function":"indentAuto",
+        "mac":"⇧Tab",
+        "usage":"Autoindent the current line or selection",
+        "pc":"⇧Tab"
+      },
+      {
+        "important":false,
+        "function":"transposeChars",
+        "mac":"⌃T",
+        "usage":"Swap the characters before and after the cursor",
+        "pc":"⌃T"
+      },
+      {
+        "important":false,
+        "function":"newlineAndIndent",
+        "mac":"Enter",
+        "usage":"Insert a newline and autoindent the new line",
+        "pc":"Enter"
+      },
+      {
+        "important":false,
+        "function":"toggleOverwrite",
+        "mac":"Insert",
+        "usage":"Flip the overwrite flag",
+        "pc":"Insert"
+      },
+      {
+        "important":false,
+        "function":"save",
+        "mac":"⌘S",
+        "usage":"",
+        "pc":"⌃S"
+      },
+      {
+        "important":true,
+        "function":"indentMore",
+        "mac":"⌘]",
+        "usage":"Indent the current line or selection by one indent unit",
+        "pc":"⌃]"
+      },
+      {
+        "important":true,
+        "function":"indentLess",
+        "mac":"⌘[",
+        "usage":"Dedent the current line or selection by one indent unit",
+        "pc":"⌃["
+      }
+    ],
+  "sublime":
+    [
+      {
+        "important":true,
+        "function":"replaceAll",
+        "mac":"⇧⌘⌥F",
+        "pc":"⇧⌃R"
+      },
+      {
+        "important":false,
+        "function":"goLineStartSmart",
+        "mac":"⌘Left"
+      },
+      {
+        "important":false,
+        "function":"indentLess",
+        "mac":"⇧Tab",
+        "pc":"⇧Tab"
+      },
+      {
+        "important":true,
+        "function":"deleteLine",
+        "mac":"⇧⌃K",
+        "pc":"⇧⌃K"
+      },
+      {
+        "important":false,
+        "function":"wrapLines",
+        "mac":"⌥Q",
+        "pc":"⌥Q"
+      },
+      {
+        "important":false,
+        "function":"goSubwordLeft",
+        "mac":"⌃Left",
+        "pc":"⌥Left"
+      },
+      {
+        "important":false,
+        "function":"goSubwordRight",
+        "mac":"⌃Right",
+        "pc":"⌥Right"
+      },
+      {
+        "important":false,
+        "function":"scrollLineUp",
+        "mac":"⌃⌥Up",
+        "pc":"⌃Up"
+      },
+      {
+        "important":false,
+        "function":"scrollLineDown",
+        "mac":"⌃⌥Down",
+        "pc":"⌃Down"
+      },
+      {
+        "important":true,
+        "function":"selectLine",
+        "mac":"⌘L",
+        "pc":"⌃L"
+      },
+      {
+        "important":false,
+        "function":"splitSelectionByLine",
+        "mac":"⇧⌘L",
+        "pc":"⇧⌃L"
+      },
+      {
+        "important":false,
+        "function":"singleSelectionTop",
+        "mac":"Esc",
+        "pc":"Esc"
+      },
+      {
+        "important":false,
+        "function":"insertLineAfter",
+        "mac":"⌘Enter",
+        "pc":"⌃Enter"
+      },
+      {
+        "important":false,
+        "function":"insertLineBefore",
+        "mac":"⇧⌘Enter",
+        "pc":"⇧⌃Enter"
+      },
+      {
+        "important":true,
+        "function":"selectNextOccurrence",
+        "mac":"⌘D",
+        "pc":"⌃D"
+      },
+      {
+        "important":false,
+        "function":"addCursorToPrevLine",
+        "mac":"⇧⌘Up",
+        "pc":"⌥⌃Up"
+      },
+      {
+        "important":false,
+        "function":"addCursorToNextLine",
+        "mac":"⇧⌘Down",
+        "pc":"⌥⌃Down"
+      },
+      {
+        "important":true,
+        "function":"selectScope",
+        "mac":"⇧⌘Space",
+        "pc":"⇧⌃Space"
+      },
+      {
+        "important":false,
+        "function":"selectBetweenBrackets",
+        "mac":"⇧⌘M",
+        "pc":"⇧⌃M"
+      },
+      {
+        "important":true,
+        "function":"goToBracket",
+        "mac":"⌘M",
+        "pc":"⌃M"
+      },
+      {
+        "important":true,
+        "function":"swapLineUp",
+        "mac":"⌘⌃Up",
+        "pc":"⇧⌃Up"
+      },
+      {
+        "important":false,
+        "function":"swapLineDown",
+        "mac":"⌘⌃Down",
+        "pc":"⇧⌃Down"
+      },
+      {
+        "important":false,
+        "function":"toggleCommentIndented",
+        "mac":"⌘/",
+        "pc":"⌃/"
+      },
+      {
+        "important":false,
+        "function":"joinLines",
+        "mac":"⌘J",
+        "pc":"⌃J"
+      },
+      {
+        "important":false,
+        "function":"duplicateLine",
+        "mac":"⇧⌘D",
+        "pc":"⇧⌃D"
+      },
+      {
+        "important":false,
+        "function":"sortLines",
+        "mac":"F9",
+        "pc":"F9"
+      },
+      {
+        "important":true,
+        "function":"sortLinesInsensitive",
+        "mac":"⌘F9",
+        "pc":"⌃F9"
+      },
+      {
+        "important":false,
+        "function":"nextBookmark",
+        "mac":"F2",
+        "pc":"F2"
+      },
+      {
+        "important":false,
+        "function":"prevBookmark",
+        "mac":"⇧F2",
+        "pc":"⇧F2"
+      },
+      {
+        "important":false,
+        "function":"toggleBookmark",
+        "mac":"⌘F2",
+        "pc":"⌃F2"
+      },
+      {
+        "important":false,
+        "function":"clearBookmarks",
+        "mac":"⌘K ⌘G",
+        "pc":"⌃K ⌃G"
+      },
+      {
+        "important":false,
+        "function":"selectBookmarks",
+        "mac":"⌥F2",
+        "pc":"⌥F2"
+      },
+      {
+        "important":false,
+        "function":"smartBackspace",
+        "mac":"⌫",
+        "pc":"⌫"
+      },
+      {
+        "important":false,
+        "function":"delLineRight",
+        "mac":"⌘K ⌘K",
+        "pc":"⌃K ⌃K"
+      },
+      {
+        "important":false,
+        "function":"upcaseAtCursor",
+        "mac":"⌘K ⌘U",
+        "pc":"⌃K ⌃U"
+      },
+      {
+        "important":false,
+        "function":"downcaseAtCursor",
+        "mac":"⌘K ⌘L",
+        "pc":"⌃K ⌃L"
+      },
+      {
+        "important":true,
+        "function":"setSublimeMark",
+        "mac":"⌘K ⌘Space",
+        "pc":"⌃K ⌃Space"
+      },
+      {
+        "important":false,
+        "function":"selectToSublimeMark",
+        "mac":"⌘K ⌘A",
+        "pc":"⌃K ⌃A"
+      },
+      {
+        "important":false,
+        "function":"deleteToSublimeMark",
+        "mac":"⌘K ⌘W",
+        "pc":"⌃K ⌃W"
+      },
+      {
+        "important":false,
+        "function":"sublimeYank",
+        "mac":"⌘K ⌘Y",
+        "pc":"⌃K ⌃Y"
+      },
+      {
+        "important":false,
+        "function":"showInCenter",
+        "mac":"⌘K ⌘C",
+        "pc":"⌃K ⌃C"
+      },
+      {
+        "important":false,
+        "function":"delLineLeft",
+        "mac":"⌘K ⌘⌫",
+        "pc":"⌃K ⌃⌫"
+      },
+      {
+        "important":false,
+        "function":"unfoldAll",
+        "mac":"⌘K ⌘J",
+        "pc":"⌃K ⌃J"
+      },
+      {
+        "important":false,
+        "function":"selectLinesUpward",
+        "mac":"⌃⇧Up",
+        "pc":"⌃⌥Up"
+      },
+      {
+        "important":false,
+        "function":"selectLinesDownward",
+        "mac":"⌃⇧Down",
+        "pc":"⌃⌥Down"
+      },
+      {
+        "important":false,
+        "function":"findUnder",
+        "mac":"⌘F3",
+        "pc":"⌃F3"
+      },
+      {
+        "important":false,
+        "function":"findUnderPrevious",
+        "mac":"⇧⌘F3",
+        "pc":"⇧⌃F3"
+      },
+      {
+        "important":false,
+        "function":"findAllUnder",
+        "mac":"⌥F3",
+        "pc":"⌥F3"
+      },
+      {
+        "important":false,
+        "function":"fold",
+        "mac":"⇧⌘[",
+        "pc":"⇧⌃["
+      },
+      {
+        "important":false,
+        "function":"unfold",
+        "mac":"⇧⌘]",
+        "pc":"⇧⌃]"
+      },
+      {
+        "important":false,
+        "function":"findIncremental",
+        "mac":"⌘I",
+        "pc":"⌃I"
+      },
+      {
+        "important":false,
+        "function":"findIncrementalReverse",
+        "mac":"⇧⌘I",
+        "pc":"⇧⌃I"
+      },
+      {
+        "important":true,
+        "function":"replace",
+        "mac":"⌘H",
+        "pc":"⌃H"
+      },
+      {
+        "important":true,
+        "function":"find",
+        "mac":"⌘F",
+        "pc":"⌃F",
+        "usage":"find/search"
+      },
+      {
+        "important":true,
+        "function":"findNext",
+        "mac":"F3",
+        "pc":"F3",
+        "usage":"find/search next occurance"
+      },
+      {
+        "important":false,
+        "function":"findPrev",
+        "mac":"⇧F3",
+        "pc":"⇧F3",
+        "usage":"find/search previous occurance"
+      },
+      {
+        "important":false,
+        "function":"transposeChars",
+        "pc":"⌃T",
+        "mac":"^T",
+        "usage":"swap next character"
+      }
+    ],
+  "vim":
+    [
+      {
+        "important":true,
+        "function":"copyLine",
+        "keyMap":"yy",
+        "usage":""
+      },
+      {
+        "important":true,
+        "function":"copyWord",
+        "keyMap":"yw",
+        "usage":""
+      },
+      {
+        "important":true,
+        "function":"paste",
+        "keyMap":"P",
+        "usage":""
+      },
+      {
+        "important":true,
+        "function":"jumpHistory",
+        "keyMap":"⌃O ⌃I",
+        "usage":"Move backward/forward through the jump history"
+      },
+      {
+        "important":true,
+        "function":"nextOccurrence",
+        "keyMap":"#*",
+        "usage":"Find next occurance of the token under cursor"
+      },
+      {
+        "important":false,
+        "function":"toggleOverwrite",
+        "keyMap":"Ins",
+        "usage":"Insert"
+      },
+      {
+        "important":true,
+        "function":"move",
+        "keyMap":"H M L",
+        "usage":"Move to the top/middle/bottom of the screen"
+      },
+      {
+        "important":false,
+        "function":"moveByLines",
+        "keyMap":"_",
+        "usage":"Forward true, toFirstChar true, repeatOffset:-1"
+      },
+      {
+        "important":false,
+        "function":"moveByDisplayLines",
+        "keyMap":"gk",
+        "usage":"Forward false"
+      },
+      {
+        "important":true,
+        "function":"moveByWords",
+        "keyMap":"W",
+        "usage":"Forward false, wordEnd false, context insert"
+      },
+      {
+        "important":false,
+        "function":"moveByParagraph",
+        "keyMap":"}",
+        "usage":"Forward true, toJumplist true"
+      },
+      {
+        "important":false,
+        "function":"moveByPage",
+        "keyMap":"[C-b]",
+        "usage":"Forward false"
+      },
+      {
+        "important":false,
+        "function":"moveByScroll",
+        "keyMap":"[C-u]",
+        "usage":"Forward false, explicitRepeat true"
+      },
+      {
+        "important":false,
+        "function":"moveToLineOrEdgeOfDocument",
+        "keyMap":"G ⇧G",
+        "usage":""
+      },
+      {
+        "important":false,
+        "function":"moveToStartOfLine",
+        "keyMap": 0
+      },
+      {
+        "important":false,
+        "function":"moveToFirstNonWhiteSpaceCharacter",
+        "keyMap":"^"
+      },
+      {
+        "important":false,
+        "function":"moveToMatchedSymbol",
+        "keyMap":"%",
+        "usage":"Inclusive true, toJumplist true"
+      },
+      {
+        "important":false,
+        "function":"moveToCharacter",
+        "keyMap":"F[char]",
+        "usage":"Forward false"
+      },
+      {
+        "important":false,
+        "function":"moveTillCharacter",
+        "keyMap":"T[char]",
+        "usage":"Forward false"
+      },
+      {
+        "important":false,
+        "function":"goToMark",
+        "keyMap":"`[char]"
+      },
+      {
+        "important":false,
+        "function":"jumpToMark",
+        "keyMap":"[\\",
+        "usage":"Forward false, linewise true"
+      },
+      {
+        "important":false,
+        "function":"moveToSymbol",
+        "keyMap":"[[char]",
+        "usage":"Forward false, toJumplist true}"
+      },
+      {
+        "important":true,
+        "function":"moveToColumn",
+        "keyMap":"[Number]|",
+        "usage":"32| will jump you to column 32 of current line"
+      },
+      {
+        "important":false,
+        "function":"moveToOtherHighlightedEnd",
+        "keyMap":"O",
+        "usage":"SameLine true, context visual"
+      },
+      {
+        "important":false,
+        "function":"delete",
+        "keyMap":"D",
+        "usage":"Remove or delete"
+      },
+      {
+        "important":false,
+        "function":"yank",
+        "keyMap":"Y"
+      },
+      {
+        "important":false,
+        "function":"change",
+        "keyMap":"C"
+      },
+      {
+        "important":false,
+        "function":"indent",
+        "keyMap":"[C-d]",
+        "usage":"Indent indentRight false, context insert"
+      },
+      {
+        "important":false,
+        "function":"findNext",
+        "keyMap":"N",
+        "usage":"Find/search next"
+      },
+      {
+        "important":false,
+        "function":"expandToLine",
+        "keyMap":"Y",
+        "usage":""
+      },
+      {
+        "important":false,
+        "function":"jumpListWalk",
+        "keyMap":"[C-o]",
+        "usage":"Forward false"
+      },
+      {
+        "important":false,
+        "function":"scroll",
+        "keyMap":"[C-y]",
+        "usage":""
+      },
+      {
+        "important":false,
+        "function":"enterInsertMode",
+        "keyMap":"R",
+        "usage":""
+      },
+      {
+        "important":false,
+        "function":"newLineAndEnterInsertMode",
+        "keyMap":"O",
+        "usage":""
+      },
+      {
+        "important":false,
+        "function":"toggleVisualMode",
+        "keyMap":"[C-q]",
+        "usage":"Blockwise true"
+      },
+      {
+        "important":false,
+        "function":"reselectLastSelection",
+        "keyMap":"gv"
+      },
+      {
+        "important":false,
+        "function":"joinLines",
+        "keyMap":"J",
+        "usage":"IsEdit true"
+      },
+      {
+        "important":false,
+        "function":"replace",
+        "keyMap":"r[char]",
+        "usage":""
+      },
+      {
+        "important":true,
+        "function":"undo",
+        "keyMap":"U",
+        "usage":""
+      },
+      {
+        "important":true,
+        "function":"redo",
+        "keyMap":"⌃R"
+      },
+      {
+        "important":false,
+        "function":"setMark",
+        "keyMap":"m[char]"
+      },
+      {
+        "important":false,
+        "function":"setRegister",
+        "keyMap":"\\[char]"
+      },
+      {
+        "important":false,
+        "function":"scrollToCursor",
+        "keyMap":"zb",
+        "usage":"ScrollToCursor position bottom,  move to first non white space character"
+      },
+      {
+        "important":false,
+        "function":"repeatLastEdit",
+        "keyMap":"."
+      },
+      {
+        "important":false,
+        "function":"textObjectManipulation",
+        "keyMap":"i[char]",
+        "usage":"TextObjectInner true"
+      },
+      {
+        "important":true,
+        "function":"search",
+        "keyMap":"?",
+        "usage":"Find/search"
+      }
+    ],
+  "emacs":
+    [
+      {
+        "important":false,
+        "function":"delete",
+        "keyMap" : "⌃W",
+        "usage":"delete from start cursor to end cursor position"
+      },
+      {
+        "important":true,
+        "function":"deleteLine",
+        "keyMap":"⌃K",
+        "usage":"delete current line"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃F",
+        "usage":"Move by char 1 forward"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃B",
+        "usage":"Move by char 1 backward"
+      },
+      {
+        "important":false,
+        "function":"delete",
+        "keyMap":"⌃H",
+        "usage":"delete previous char"
+      },
+      {
+        "important":true,
+        "function":"move",
+        "keyMap":"⌥F",
+        "usage":"Move by word forward"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌥B",
+        "usage":"Move by word backward"
+      },
+      {
+        "important":true,
+        "function":"deleteWord",
+        "keyMap":"⌥D",
+        "usage":"delete from cursor to next word"
+      },
+      {
+        "important":true,
+        "function":"deleteWord",
+        "keyMap":"⌥⌫",
+        "usage":"delete from cursor to previous word"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃N",
+        "usage":"Move cursor to nextLine"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃P",
+        "usage":"Move cursor to previousLine"
+      },
+      {
+        "important":false,
+        "function":"goto",
+        "keyMap":"⌃A",
+        "usage":"Goto line start"
+      },
+      {
+        "important":false,
+        "function":"goto",
+        "keyMap":"⌃E",
+        "usage":"Goto line end"
+      },
+      {
+        "important":false,
+        "function":"goto",
+        "keyMap":"Home",
+        "usage":"Goto line start"
+      },
+      {
+        "important":false,
+        "function":"goto",
+        "keyMap":"End",
+        "usage":"Goto line end"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌥V",
+        "usage":"Move page up"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃V",
+        "usage":"Move to next page"
+      },
+      {
+        "important":false,
+        "function":"deleteSentence",
+        "keyMap":"⌥K",
+        "usage":"delete from cursor to next sentence"
+      },
+      {
+        "important":false,
+        "function":"deleteExpr",
+        "keyMap":"⌃⌥K",
+        "usage":"delete from cursor to next expr"
+      },
+      {
+        "important":false,
+        "function":"delete",
+        "keyMap":"⌃⌥⌫",
+        "usage":"delete from cursor to pre expr"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃⌥F",
+        "usage":"Move to next expr"
+      },
+      {
+        "important":false,
+        "function":"move",
+        "keyMap":"⌃⌥B",
+        "usage":"Move to previous expr"
+      },
+      {
+        "important":false,
+        "function":"select",
+        "keyMap":"⇧⌃⌥2",
+        "usage":"Select from cursor to end of Expr"
+      },
+      {
+        "important":false,
+        "function":"replace",
+        "keyMap":"⌃⌥T",
+        "usage":"Replace range of expr"
+      },
+      {
+        "important":false,
+        "function":"goto",
+        "keyMap":"⌃⌥U",
+        "usage":"Goto enclosing expr"
+      },
+      {
+        "important":false,
+        "function":"space",
+        "keyMap":"⌥Space",
+        "usage":"To enter just one space"
+      },
+      {
+        "important":false,
+        "function":"newLine",
+        "keyMap":"⌃O",
+        "usage":"Adding new line"
+      },
+      {
+        "important":false,
+        "function":"transpose",
+        "keyMap":"⌃T",
+        "usage":"Transpose consecutive chars"
+      },
+      {
+        "important":true,
+        "function":"toUpper",
+        "keyMap":"⌥C",
+        "usage":"First char of words to upper case"
+      },
+      {
+        "important":true,
+        "function":"toLower",
+        "keyMap":"⌥L",
+        "usage":"To lower case"
+      },
+      {
+        "important":true,
+        "function":"autocomplete",
+        "keyMap":"⌥/",
+        "usage":"Autocomplete"
+      },
+      {
+        "important":false,
+        "function":"indent",
+        "keyMap":"Tab",
+        "usage":"IndentAuto"
+      }
+    ]
+}
