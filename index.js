@@ -2,7 +2,7 @@ function getHeadings(){
   return ["heading a", "heading b", "heading c", "heading d"];
 }
 
-function printTable(){
+function printTable(tableBody){
   var headings = getHeadings();
   var innerHTML = "";
   headings.forEach(function(heading, index){
@@ -11,19 +11,22 @@ function printTable(){
     jsonData.forEach(function(row, index){
       var important = row.important == true ? "important" : "less_important";
       innerHTML += "<tr class=\"commands_row  " + important + " " + heading + "\">";
-      innerHTML += "<td colspan=\"2\" class=\"commands_cell\">";
-      innerHTML += "<keybd class=\"keybd\" data-current-os='" + JSON.stringify(row) + "'>" + row.keyMap + "</keybd>";
-      innerHTML += "</td>";
+      innerHTML += "<td colspan=\"2\">" + row.keyMap + "</td>";
 
-      innerHTML += "<td class=\"break-words commands_cell\" colspan=\"3\">";
+      innerHTML += "<td class=\"break-words target_cell\" colspan=\"3\">";
       innerHTML += titleize(row.function);
       if("usage" in row){
         innerHTML += " | " + titleize(row.usage);
       }
       innerHTML += "</td></tr>";
     });
+    innerHTML += "<tr><td id=\"msg_not_found\" style=\"display: none;\" colspan=\"5\"></td></tr>";
   });
-  $("#commands_table_body").html(innerHTML);
+  $('#'+tableBody).html(innerHTML);
+}
+
+function titleize(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function getData(heading){
