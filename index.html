@@ -26,13 +26,13 @@
       <div class="container">
 
         <div class="input-group">
-          <input type="text" id="search_commands" class="form-control" placeholder="Search command..">
+          <input type="text" id="search_input" class="form-control" placeholder="Search command..">
           <span id="extend_search_toggle" class="input-group-addon" style="cursor: pointer;">
             <span id="extend_search_text">More Results&nbsp;&nbsp;</span><span id="extend_search_icon" class="fa fa-chevron-up icon"></span>
           </span>
         </div>
 
-        <table id="commands_table" class="table table-striped" cols="5" border="0">
+        <table id="myTable" class="table dialog-table myTable table-striped" cols="5" border="0">
 
           <thead>
             <tr>
@@ -41,14 +41,15 @@
             </tr>
           </thead>
 
-          <tbody id="commands_table_body">
+          <tbody id="table_body">
             <script type="text/javascript">
-              printTable();
-            </script>
+              printTable('table_body');
 
-            <tr>
-              <td id="command_not_found" style="display: none;" colspan="5"></td>
-            </tr>
+              // Calling talash
+              init_talash('search_input', 'myTable');
+              // For msg print, pass the div id
+              // init_talash('search_input', 'myTable', 'msg_not_found');
+            </script>
           </tbody>
         </table>
         <div class="row container-footer">

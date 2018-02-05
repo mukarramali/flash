@@ -2,7 +2,7 @@ function getHeadings(){
   return ["heading a", "heading b", "heading c", "heading d"];
 }
 
-function printTable(){
+function printTable(tableBody){
   var headings = getHeadings();
   var innerHTML = "";
   headings.forEach(function(heading, index){
@@ -22,8 +22,13 @@ function printTable(){
       }
       innerHTML += "</td></tr>";
     });
+    innerHTML += "<tr><td id=\"msg_not_found\" style=\"display: none;\" colspan=\"5\"></td></tr>";
   });
-  $("#commands_table_body").html(innerHTML);
+  $('#'+tableBody).html(innerHTML);
+}
+
+function titleize(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function getData(heading){
