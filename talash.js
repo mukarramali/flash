@@ -1,5 +1,5 @@
 config = {};
-function init_talash(searchInputId = 'search_commands', tableId = 'commands_table', notFoundDiv = 'command_not_found'){
+function init_talash(searchInputId = 'search_commands', tableId = 'commands_table', targetColumnClass = '', notFoundDiv = 'command_not_found'){
 
   config['searchInputId'] = '#'+searchInputId;
   config['tableId'] = '#'+tableId;
@@ -9,8 +9,7 @@ function init_talash(searchInputId = 'search_commands', tableId = 'commands_tabl
   config['extendSearchIcon'] = '#'+'extend_search_icon';
   config['extendSearchText'] = '#'+'extend_search_text';
 
-  config['rowClass'] = '.commands_row';
-  config['columnClass'] = '.commands_cell';
+  config['columnClass'] = '.' + targetColumnClass;
 
   config['downIcon'] = 'fa-chevron-down';
   config['upIcon'] = 'fa-chevron-up';
@@ -30,9 +29,16 @@ function init_talash(searchInputId = 'search_commands', tableId = 'commands_tabl
   $(document).on('click', config['extendSearchToggle'], toggleSearch);
 }
 
+function filterTalash(flag = true, lessImportantRows = '.less_important'){
+  if(flag)
+    $(config['lessImportantRows']).hide();
+  else
+    $(config['lessImportantRows']).show();
+}
+
 function talash(){
   var search_value = $(config['searchInputId']).val();
-  var rows = $(config['rowClass']);
+  var rows = document.getElementById(config['tableId'].slice(1)).rows;
   var found = false;
 
   if(search_value.length > 0){
@@ -51,7 +57,7 @@ function talash(){
     afterSearch(found, search_value);
   }
   else{
-    $(config['rowClass']).show();
+    $(rows).show();
     removeHighlight(config['tableId']);
     afterSearch(true, search_value);
   }
@@ -100,11 +106,9 @@ function hightlight(search_value){
   // highlight new query
   if(search_value.length > 0){
     var search_regexp = new RegExp(search_value, 'ig');
-    var cells = $(config['columnClass']);
+    var cells = config['columnClass'].length == 1 ? $(config['tableId'] + " td") : $(config['columnClass']);
     for(var i=0;i<cells.length;i++)
     {
-      if(cells[i].innerHTML.indexOf('keybd') >= 0)
-        continue;
       cells[i].innerHTML = cells[i].innerHTML.replace(search_regexp, function(match){
         return hightlighter_prefix + match + hightlighter_suffix;
       });
