@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="talash.css"/>
+    <script type="text/javascript" src="talash.js"></script>
+
+    <title>Talash</title>
+
+  </head>
+
+  <body>
+      <div class="jumbotron text-center">
+        <h1>Talash</h1>
+        <h3>Helps You Search In Table And Filter Important Data</h3>
+        <h3><a href="https://github.com/mukarramali/talash">Source Code</a></h3>
+      </div>
+
+      <div class="container">
+
+        <h4>Table With Toggle Important Data & Target Columns or try <a href="index.html">Basic Example</a></h4>
+
+        <div class="input-group">
+          <input type="text" id="search_input" class="form-control" placeholder="Search command..">
+          <span id="extend_search_toggle" class="input-group-addon" style="cursor: pointer;">
+            <span id="extend_search_text">More Results&nbsp;&nbsp;</span><span id="extend_search_icon" class="fa fa-chevron-up icon"></span>
+          </span>
+        </div>
+
+        <table id="myTable" class="table dialog-table myTable table-striped" cols="5" border="0">
+
+          <thead>
+            <tr>
+              <th colspan="2">ColumnA</th>
+              <th colspan="3">ColumnB</th>
+            </tr>
+          </thead>
+
+          <tbody id="table_body">
+            <script type="text/javascript">
+              printTable('table_body');
+
+              // For msg print, pass the div id
+              init_talash('search_input', 'myTable', 'target_cell');
+            </script>
+          </tbody>
+        </table>
+
+
+
+        <div class="row container-footer">
+          <h9>^Ctrl  ⌘Cmd  ⇧Shift  ⌥Alt  ⌫Backspace</h9>
+        </div>
+      </div>
+  </body>
+</html>

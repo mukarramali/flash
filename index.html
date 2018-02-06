@@ -25,33 +25,52 @@
 
       <div class="container">
 
-        <div class="input-group">
-          <input type="text" id="search_input" class="form-control" placeholder="Search command..">
-          <span id="extend_search_toggle" class="input-group-addon" style="cursor: pointer;">
-            <span id="extend_search_text">More Results&nbsp;&nbsp;</span><span id="extend_search_icon" class="fa fa-chevron-up icon"></span>
-          </span>
+        <h4>Basic Demo Table or try <a href="teetar.html">Advance Example</a></h4>
+
+        <div class="input-group" style="width: 100%;">
+          <input type="text" id="demoInput" class="form-control" placeholder="Search..">
         </div>
-
-        <table id="myTable" class="table dialog-table myTable table-striped" cols="5" border="0">
-
-          <thead>
-            <tr>
-              <th colspan="2">ColumnA</th>
-              <th colspan="3">ColumnB</th>
-            </tr>
-          </thead>
-
-          <tbody id="table_body">
-            <script type="text/javascript">
-              printTable('table_body');
-
-              // Calling talash
-              init_talash('search_input', 'myTable');
-              // For msg print, pass the div id
-              // init_talash('search_input', 'myTable', 'msg_not_found');
-            </script>
-          </tbody>
+        <table id="demoTable" class="table dialog-table table-striped">
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
         </table>
+        <script type="text/javascript">
+          init_talash('demoInput', 'demoTable');
+        </script>
+
         <div class="row container-footer">
           <h9>^Ctrl  ⌘Cmd  ⇧Shift  ⌥Alt  ⌫Backspace</h9>
         </div>

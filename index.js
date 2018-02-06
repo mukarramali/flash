@@ -1,27 +1,20 @@
-function getHeadings(){
-  return ["heading a", "heading b", "heading c", "heading d"];
-}
 
 function printTable(tableBody){
-  var headings = getHeadings();
   var innerHTML = "";
-  headings.forEach(function(heading, index){
-    innerHTML += "<tr><th colspan=\"5\">" + heading.toUpperCase() + "</th></tr>";
-    var jsonData = getData(heading);
-    jsonData.forEach(function(row, index){
-      var important = row.important == true ? "important" : "less_important";
-      innerHTML += "<tr class=\"commands_row  " + important + " " + heading + "\">";
-      innerHTML += "<td colspan=\"2\">" + row.keyMap + "</td>";
+  var jsonData = getData();
+  jsonData.forEach(function(row, index){
+    var important = row.important == true ? "important" : "less_important";
+    innerHTML += "<tr class=\"commands_row  " + important + "\">";
+    innerHTML += "<td colspan=\"2\">" + row.keyMap + "</td>";
 
-      innerHTML += "<td class=\"break-words target_cell\" colspan=\"3\">";
-      innerHTML += titleize(row.function);
-      if("usage" in row){
-        innerHTML += " | " + titleize(row.usage);
-      }
-      innerHTML += "</td></tr>";
-    });
-    innerHTML += "<tr><td id=\"msg_not_found\" style=\"display: none;\" colspan=\"5\"></td></tr>";
+    innerHTML += "<td class=\"break-words target_cell\" colspan=\"3\">";
+    innerHTML += titleize(row.function);
+    if("usage" in row){
+      innerHTML += " | " + titleize(row.usage);
+    }
+    innerHTML += "</td></tr>";
   });
+  innerHTML += "<tr><td id=\"msg_not_found\" style=\"display: none;\" colspan=\"5\"></td></tr>";
   $('#'+tableBody).html(innerHTML);
 }
 
@@ -29,9 +22,8 @@ function titleize(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function getData(heading){
-  var data = {
-    "heading a":
+function getData(){
+  var data =
       [
         {
           "important":true,
@@ -236,10 +228,7 @@ function getData(heading){
           "function":"indentLess",
           "keyMap":"⌘[",
           "usage":"Dedent the current line or selection by one indent unit"
-        }
-      ],
-    "heading b":
-      [
+        },
         {
           "important":true,
           "function":"replaceAll",
@@ -528,10 +517,7 @@ function getData(heading){
           "function":"transposeChars",
           "keyMap":"^T",
           "usage":"swap next character"
-        }
-      ],
-    "heading c":
-      [
+        },
         {
           "important":true,
           "function":"copyLine",
@@ -798,202 +784,6 @@ function getData(heading){
           "keyMap":"?",
           "usage":"Find/search"
         }
-      ],
-    "heading d":
-      [
-        {
-          "important":false,
-          "function":"delete",
-          "keyMap" : "⌃W",
-          "usage":"delete from start cursor to end cursor position"
-        },
-        {
-          "important":true,
-          "function":"deleteLine",
-          "keyMap":"⌃K",
-          "usage":"delete current line"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃F",
-          "usage":"Move by char 1 forward"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃B",
-          "usage":"Move by char 1 backward"
-        },
-        {
-          "important":false,
-          "function":"delete",
-          "keyMap":"⌃H",
-          "usage":"delete previous char"
-        },
-        {
-          "important":true,
-          "function":"move",
-          "keyMap":"⌥F",
-          "usage":"Move by word forward"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌥B",
-          "usage":"Move by word backward"
-        },
-        {
-          "important":true,
-          "function":"deleteWord",
-          "keyMap":"⌥D",
-          "usage":"delete from cursor to next word"
-        },
-        {
-          "important":true,
-          "function":"deleteWord",
-          "keyMap":"⌥⌫",
-          "usage":"delete from cursor to previous word"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃N",
-          "usage":"Move cursor to nextLine"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃P",
-          "usage":"Move cursor to previousLine"
-        },
-        {
-          "important":false,
-          "function":"goto",
-          "keyMap":"⌃A",
-          "usage":"Goto line start"
-        },
-        {
-          "important":false,
-          "function":"goto",
-          "keyMap":"⌃E",
-          "usage":"Goto line end"
-        },
-        {
-          "important":false,
-          "function":"goto",
-          "keyMap":"Home",
-          "usage":"Goto line start"
-        },
-        {
-          "important":false,
-          "function":"goto",
-          "keyMap":"End",
-          "usage":"Goto line end"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌥V",
-          "usage":"Move page up"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃V",
-          "usage":"Move to next page"
-        },
-        {
-          "important":false,
-          "function":"deleteSentence",
-          "keyMap":"⌥K",
-          "usage":"delete from cursor to next sentence"
-        },
-        {
-          "important":false,
-          "function":"deleteExpr",
-          "keyMap":"⌃⌥K",
-          "usage":"delete from cursor to next expr"
-        },
-        {
-          "important":false,
-          "function":"delete",
-          "keyMap":"⌃⌥⌫",
-          "usage":"delete from cursor to pre expr"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃⌥F",
-          "usage":"Move to next expr"
-        },
-        {
-          "important":false,
-          "function":"move",
-          "keyMap":"⌃⌥B",
-          "usage":"Move to previous expr"
-        },
-        {
-          "important":false,
-          "function":"select",
-          "keyMap":"⇧⌃⌥2",
-          "usage":"Select from cursor to end of Expr"
-        },
-        {
-          "important":false,
-          "function":"replace",
-          "keyMap":"⌃⌥T",
-          "usage":"Replace range of expr"
-        },
-        {
-          "important":false,
-          "function":"goto",
-          "keyMap":"⌃⌥U",
-          "usage":"Goto enclosing expr"
-        },
-        {
-          "important":false,
-          "function":"space",
-          "keyMap":"⌥Space",
-          "usage":"To enter just one space"
-        },
-        {
-          "important":false,
-          "function":"newLine",
-          "keyMap":"⌃O",
-          "usage":"Adding new line"
-        },
-        {
-          "important":false,
-          "function":"transpose",
-          "keyMap":"⌃T",
-          "usage":"Transpose consecutive chars"
-        },
-        {
-          "important":true,
-          "function":"toUpper",
-          "keyMap":"⌥C",
-          "usage":"First char of words to upper case"
-        },
-        {
-          "important":true,
-          "function":"toLower",
-          "keyMap":"⌥L",
-          "usage":"To lower case"
-        },
-        {
-          "important":true,
-          "function":"autocomplete",
-          "keyMap":"⌥/",
-          "usage":"Autocomplete"
-        },
-        {
-          "important":false,
-          "function":"indent",
-          "keyMap":"Tab",
-          "usage":"IndentAuto"
-        }
-      ]
-  };
-  return data[heading];
+      ];
+  return data;
 }
