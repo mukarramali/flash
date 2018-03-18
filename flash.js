@@ -1,5 +1,5 @@
 config = {};
-function init_talash(searchInputId = 'search_commands', tableId = 'commands_table', targetColumnClass = '', notFoundDiv = 'command_not_found'){
+function init_flash(searchInputId = 'search_commands', tableId = 'commands_table', targetColumnClass = '', notFoundDiv = 'command_not_found'){
 
   config['searchInputId'] = '#'+searchInputId;
   config['tableId'] = '#'+tableId;
@@ -23,7 +23,7 @@ function init_talash(searchInputId = 'search_commands', tableId = 'commands_tabl
   $(config['lessImportantRows']).hide();
   $(config['notFoundDiv']).hide();
   // When something is entered in search box
-  $(config['searchInputId']).keyup(talash);
+  $(config['searchInputId']).keyup(flash);
 
   // on more result, toggle the less important rows
   $(document).on('click', config['extendSearchToggle'], toggleSearch);
@@ -36,7 +36,7 @@ function filterTalash(flag = true, lessImportantRows = '.less_important'){
     $(config['lessImportantRows']).show();
 }
 
-function talash(){
+function flash(){
   var search_value = $(config['searchInputId']).val();
   var rows = document.getElementById(config['tableId'].slice(1)).rows;
   var found = false;
